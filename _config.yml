@@ -13,15 +13,20 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
+title: "Hourglass of Doom"
+subtitle: "Everything I have to say before it's over."
+#url: (custom url)
+#logo: (path to .png)
 email:
+name: "Critical Denizen"
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  #Write an awesome description for your new site here. You can edit this
+  #line in _config.yml. It will appear in your document head meta (for
+  #Google search results) and in your feed.xml site description.
 twitter_username: username
 github_username: username
-minimal_mistakes_skin: default
+minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+site.locale: en-US
 search: true
 
 # Build settings
@@ -95,7 +100,9 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
+      show_date: true
+      date_format: "%Y-%m-%d"
       comments: true
       share: true
       related: true
@@ -113,3 +120,11 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+comments:
+  provider: "utterances"
+  utterances:
+    theme: "github-dark"
+    issue_term: "pathname"
+    label: "comment" # Optional - must be existing label.
+  
